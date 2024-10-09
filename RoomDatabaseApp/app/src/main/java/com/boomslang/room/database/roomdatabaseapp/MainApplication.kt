@@ -18,5 +18,4 @@ class MainApplication : Application() {
                 TodoDatabase.NAME,
             ).build()
     }
-
 }
