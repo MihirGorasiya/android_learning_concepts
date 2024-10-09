@@ -66,4 +66,23 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Retrofit for networking
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Jetpack Compose
+    implementation(libs.androidx.activity.compose.v172)
+    implementation(libs.ui)
+    implementation(libs.androidx.material)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Lifecycle ViewModel and LiveData
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 }
