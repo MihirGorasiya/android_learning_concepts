@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240517853105",
+    "project_id": "test-app-d396e",
+    "storage_bucket": "test-app-d396e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240517853105:android:d714243a7a68dca459d790",
+        "android_client_info": {
+          "package_name": "com.boomslang.firebasetestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3YZH1twB8DTFRMwI9ucnQy98FtzVcD1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
