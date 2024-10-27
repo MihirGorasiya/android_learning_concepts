@@ -15,7 +15,7 @@ class ProductViewModel(private val productRepository: ProductRepository) : ViewM
         fetchProducts()
     }
 
-   private fun fetchProducts() {
+    private fun fetchProducts() {
         viewModelScope.launch {
             try {
                 val products = productRepository.fetchProducts()
@@ -25,5 +25,9 @@ class ProductViewModel(private val productRepository: ProductRepository) : ViewM
             }
 
         }
+    }
+
+    fun getProductByName(productName: String): Product? {
+        return _products.value?.find { it.name == productName }
     }
 }

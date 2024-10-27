@@ -73,20 +73,21 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.database)
 
+    implementation("androidx.navigation:navigation-compose:2.8.1")
     // Retrofit for networking
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-// Coroutines
+    // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
-// Jetpack Compose
+    // Jetpack Compose
     implementation("androidx.compose.ui:ui-tooling:1.7.4")
     implementation("androidx.compose.ui:ui:1.7.4")
     implementation("com.google.android.material:material:1.12.0")
 
-// Lifecycle ViewModel and LiveData
+    // Lifecycle ViewModel and LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
     implementation("androidx.activity:activity-ktx:1.9.3")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")

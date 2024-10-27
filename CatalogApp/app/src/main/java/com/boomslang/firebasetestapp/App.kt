@@ -1,6 +1,7 @@
 package com.boomslang.firebasetestapp
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -31,11 +32,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.max
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import com.boomslang.firebasetestapp.widgets.ImageFromUrl
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App(
+    navController: NavController,
     productRepository: ProductRepository = remember { ProductRepository() }
 ) {
     val viewModel: ProductViewModel = viewModel(factory = ViewModelFactory(productRepository))
@@ -66,8 +69,11 @@ fun App(
 //                                        .background(Color.DarkGray)
 //                                        .fillMaxSize()
                                 ) {
-                                    Column(modifier = Modifier.padding(10.dp)) {
-                                        print("image url-> ${products[index].imageUrl}")
+                                    Column(modifier = Modifier
+                                        .padding(10.dp)
+                                        .clickable {
+                                            navController.navigate("${Constants.PRODUCT_ROUTE}/${products[index].name}")
+                                        }) {
                                         Box(
                                             modifier = Modifier
                                                 .size(170.dp, 170.dp)
